@@ -35,7 +35,7 @@ class Crypt {
         ],
         options: {
           name: {
-            usage: 'Name of the secert',
+            usage: 'Name of the secret',
             shortcut: 'n',
             required: true,
           },
@@ -46,6 +46,18 @@ class Crypt {
           save: {
             usage: `Save the encrypted secret (to ${SECRET_FILE}`,
           },
+          stage: {
+            usage: 'The target Stage',
+            required: true
+          },
+          region: {
+            usage: 'The target AWS Region',
+            required: false
+          },
+          allRegions: {
+            usage: 'Automatically target all regions for the current Stage',
+            required: false
+          }
         },
       },
       decrypt: {
